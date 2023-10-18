@@ -59,8 +59,10 @@ public class ProductDAOExt extends DAO{
             }
             return product1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
@@ -79,8 +81,10 @@ public class ProductDAOExt extends DAO{
             }
             return product1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
@@ -99,8 +103,10 @@ public class ProductDAOExt extends DAO{
             }
             return product1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
@@ -119,8 +125,10 @@ public class ProductDAOExt extends DAO{
             }
             return product1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
@@ -141,8 +149,10 @@ public class ProductDAOExt extends DAO{
             }
             return productList;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 }

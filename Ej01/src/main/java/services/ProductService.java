@@ -31,6 +31,9 @@ public class ProductService {
             if (price < 0) { throw new Exception("Debe indicar el precio."); }
             if (producerId < 0) { throw new Exception("Debe indicar el id de fabricante."); }
             Product product = productDAOExt.showProductById(id);
+            product.setProductName(name);
+            product.setPrice(price);
+            product.setProducerId(producerId);
             productDAOExt.updateProduct(product);
         } catch (Exception e) {
             throw e;

@@ -39,6 +39,7 @@ public class ProducerService {
                 throw new Exception("Debe indicar el nombre ");
             }
             Producer producer = producerDAOExt.showProducerById(id);
+            producer.setProducerName(name);
             producerDAOExt.updateProducer(producer);
         } catch (Exception e) {
             throw e;

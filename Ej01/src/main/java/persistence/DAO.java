@@ -57,9 +57,6 @@ public abstract class DAO {
         catch(Exception e){
             throw e;
         }
-        finally{
-            disconnectDataBase();
-        }
     }
 
 

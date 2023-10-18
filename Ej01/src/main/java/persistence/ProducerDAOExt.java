@@ -49,15 +49,17 @@ public class ProducerDAOExt extends DAO {
             }
             return producer1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
     public Producer showProducerById(Long producerId) throws Exception {
         try {
             if (producerId == null) throw new Exception("Debe ingresar un nombre válido");
-            String sql = " SELECT * FROM fabricante WHERE nombre = ' " + producerId + " ' ";
+            String sql = " SELECT * FROM fabricante WHERE codigo = " + producerId;
             this.executeQueries(sql);
             Producer producer1 = null;
             while (result.next()) {
@@ -67,8 +69,10 @@ public class ProducerDAOExt extends DAO {
             }
             return producer1;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 
@@ -87,8 +91,10 @@ public class ProducerDAOExt extends DAO {
             }
             return producerList;
         } catch (Exception e) {
-            disconnectDataBase();
             throw e;
+        }
+        finally{
+            disconnectDataBase();
         }
     }
 

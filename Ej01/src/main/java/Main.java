@@ -9,7 +9,7 @@ public class Main {
         ProducerService p1 = new ProducerService(DAO);
         Producer pr = new Producer(0L, "Z");
         //p1.addProducer(pr);
-        p1.updateProducer(10L, "LALALALA");
+        p1.updateProducer(14L, "5555");
     }
 }
 
