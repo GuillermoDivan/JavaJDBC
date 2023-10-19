@@ -14,6 +14,7 @@ public class ProducerService {
     /*public ProducerService() {
         this.producerDAOExt = new ProducerDAOExt();
     }*/
+
     /*public void addProducer(Producer producer) throws Exception {
         try { if (producer == null) { throw new Exception
                 ("Debe indicar el nombre de fabricante."); }
@@ -76,7 +77,7 @@ public class ProducerService {
 
     public List<Producer> findAllProducers() throws Exception {
         try { List<Producer> producerList = producerDAOExt.showProducerList();
-            for (Producer p : producerList) { System.out.println(p.toString()); }
+            for (Producer p : producerList) { System.out.println(p); }
             return producerList;
         } catch (Exception e) {throw e; }
     }

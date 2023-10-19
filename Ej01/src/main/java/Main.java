@@ -1,15 +1,10 @@
-import entities.Producer;
-import persistence.ProducerDAOExt;
+import services.Menu;
 import services.ProducerService;
 
 public class Main {
     public static void main(String[] args) throws Exception {
-        String nombre = "abc";
-        ProducerDAOExt DAO = new ProducerDAOExt();
-        ProducerService p1 = new ProducerService(DAO);
-        Producer pr = new Producer(0L, "Z");
-        //p1.addProducer(pr);
-        p1.updateProducer(14L, "5555");
+        Menu menu = new Menu();
+        menu.menu();
     }
 }
 

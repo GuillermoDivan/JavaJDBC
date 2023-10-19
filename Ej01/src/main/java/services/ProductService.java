@@ -95,4 +95,41 @@ public class ProductService {
         } catch (Exception e) {throw e; }
     }
 
+    public List<Product> findAllProductsByName() throws Exception {
+        try { List<Product> productList = productDAOExt.showProductList();
+            for (Product p : productList) { System.out.println(p.getProductName()); }
+            return productList;
+        } catch (Exception e) {throw e; }
+    }
+
+    public List<Product> findAllProductsByNameByPrice() throws Exception {
+        try { List<Product> productList = productDAOExt.showProductList();
+            for (Product p : productList) { System.out.println(p.getProductName() + " | " +
+                    p.getPrice()); }
+            return productList;
+        } catch (Exception e) {throw e; }
+    }
+
+    public List<Product> findAllProductsByPriceRange(double min, double max) throws Exception {
+        try { List<Product> productList = productDAOExt.showProductByPriceRange(min, max);
+            for (Product p : productList) { System.out.println(p.getProductName() + " | " +
+                    p.getPrice()); }
+            return productList;
+        } catch (Exception e) {throw e; }
+    }
+
+    public List<Product> findAllProductsByNameLike(String like) throws Exception {
+        try { List<Product> productList = productDAOExt.showProductByNameLike(like);
+            for (Product p : productList) { System.out.println(p.toString()); }
+            return productList;
+        } catch (Exception e) {throw e; }
+    }
+
+    public List<Product> findAllProductsByLowerPrice() throws Exception {
+        try { List<Product> productList = productDAOExt.showProductByLowerPrice();
+            for (Product p : productList) { System.out.println(p.getProductName() + " | " + p.getPrice()); }
+            return productList;
+        } catch (Exception e) {throw e; }
+    }
+
 }

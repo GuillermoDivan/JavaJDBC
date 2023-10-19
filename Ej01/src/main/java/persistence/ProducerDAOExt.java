@@ -78,7 +78,7 @@ public class ProducerDAOExt extends DAO {
 
     public List<Producer> showProducerList() throws Exception {
         try {
-            String sql = " SELECT codigo, nombre FROM fabricante ";
+            String sql = " SELECT * FROM fabricante ";
             this.executeQueries(sql);
             Producer producer1 = null;
             List<Producer> producerList = new ArrayList<>();
